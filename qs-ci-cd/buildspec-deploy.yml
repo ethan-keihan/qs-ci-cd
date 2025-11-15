@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Python dependencies..."
+      - pip install --upgrade pip
+      - pip install boto3
+  build:
+    commands:
+      - echo "Build/Deploy started on `date`"
+      # Determine env from branch; main -> prod, others -> dev
+      - |
+        if [[ "$CODEBUILD_SOURCE_VERSION" == "refs/heads/main" ]]; then
+          ENV_NAME="prod"
+        else
+          ENV_NAME="dev"
+        fi
+      - echo "Using ENV_NAME=$ENV_NAME"
+      - python scripts/deploy_quicksight.py $ENV_NAME
+  post_build:
+    commands:
+      - echo "Deployment finished on `date`"
+
+artifacts:
+  files:
+    - '**/*'

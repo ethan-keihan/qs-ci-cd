@@ -1,0 +1,18 @@
+{
+  "Version": "1",
+  "Sheets": [
+    {
+      "SheetId": "Sheet1",
+      "Name": "Overview",
+      "Visuals": []
+    }
+  ],
+  "DataSetConfigurations": [
+    {
+      "Placeholder": "sales_data",
+      "DataSetSchema": {
+        "ColumnSchemaList": []
+      }
+    }
+  ]
+}

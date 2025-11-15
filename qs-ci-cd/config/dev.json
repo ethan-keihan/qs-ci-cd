@@ -1,0 +1,14 @@
+{
+  "AccountId": "025670212483",
+  "Region": "us-east-1",
+  "TemplateId": "sales-template-dev",
+  "TemplateName": "Sales Template (dev)",
+  "DashboardId": "sales-dashboard-dev",
+  "DashboardName": "Sales Dashboard (dev)",
+  "DataSetPlaceholders": [
+    {
+      "Placeholder": "sales_data",
+      "DataSetArn": "arn:aws:quicksight:us-east-1:025670212483:dataset/sales_dataset_dev"
+    }
+  ]
+}
