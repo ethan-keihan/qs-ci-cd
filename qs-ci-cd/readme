@@ -1,0 +1,11 @@
+quicksight-ci-cd/
+├── templates/
+│   └── sales_template.json
+├── config/
+│   ├── dev.json
+│   └── prod.json
+├── scripts/
+│   └── deploy_quicksight.py
+├── buildspec-deploy.yml
+└── cloudformation/
+    └── pipeline.yml
